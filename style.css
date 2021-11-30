@@ -1,0 +1,155 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+.container{
+	max-width: 960px;
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 20px;
+}
+
+.parallax{
+	background: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url('tloz.png') no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 300px;
+}
+
+body{
+	color: #dad3db;
+	background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(bg.gif);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.banner{
+	width: 100%
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.navbar{
+	width: 96%;
+	margin: auto;
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo{
+	width: 120px;
+	cursor: pointer;
+}
+
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+.navbar ul li a{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.navbar ul li::after{
+	content: '';
+	height: 3px
+	;width: 0;
+	background: rgba(60,32,34,1);
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+	width: 100%;
+}
+
+.box{
+	width: 450px;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 40px;
+	text-align: center;
+	margin: auto;
+	margin-top: 5%;
+	color: #dad3db;
+}
+
+.box-img{
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+
+.box h1{
+	font-size: 40px;
+	letter-spacing: 1px;
+	font-weight: 100;
+	padding: 5px;
+}
+
+h2{
+	padding: 5px;
+}
+
+.box h5{
+	font-size: 20px;
+	font-weight: 100;
+	padding: 5px;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+.box li{
+	display: inline-block;
+	margin: 6px;
+	list-style: none;
+}
+
+.box li a{
+	color: #dad3db;
+	text-decoration: none;
+	font-size: 30px;
+}
+
+p{
+	padding: 5px;
+	padding-bottom: 5px;
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #000B0E #000400;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: orange;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  border: 3px solid orange;
+}
