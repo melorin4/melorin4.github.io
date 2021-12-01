@@ -83,6 +83,7 @@ body{
 	margin: auto;
 	margin-top: 5%;
 	color: #dad3db;
+	border-radius: 50%;
 }
 
 .box-img{
@@ -152,4 +153,64 @@ p{
   background-color: blue;
   border-radius: 20px;
   border: 3px solid orange;
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  margin: -76px 0 0 -76px;
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #34191A;
+  border-right: 16px solid #193433;
+  border-bottom: 16px solid #34191A;
+  border-left: 16px solid #193433;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  opacity: 0.75;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:0.5 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:0.5 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+div {
+  padding: 20px;
+  border: 1px solid #34191A;
+  border-opacity:0.5;
 }
