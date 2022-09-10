@@ -18,7 +18,7 @@
 }
 body{
 	color: #dad3db;
-	background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(pics/17.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(17.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
