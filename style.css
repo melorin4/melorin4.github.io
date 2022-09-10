@@ -2,7 +2,7 @@
 	padding: 0px;
 	margin: 0px;
 	text-align: center;
-	font-family: "Lucida Console", "Courier New", monospace;
+	font-family: "Indie Flower", monospace;
 }
 .container{
 	max-width: 960px;
@@ -11,79 +11,28 @@
 	padding: 20px;
 }
 
-.parallax{
-	background: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url('tloz.png') no-repeat center;
-	background-size: cover;
-	background-attachment: fixed;
-	height: 300px;
+.intro{
+	text-align: center;
+	padding-top: 50px;
+	font-size: 40px;
 }
-
 body{
 	color: #dad3db;
-	background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(bg.gif);
+	background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(pics/17.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
-}
-
-.banner{
-	width: 100%
-	height: 100%;
-	background-size: cover;
-	background-position: center;
-}
-
-.navbar{
-	width: 96%;
-	margin: auto;
-	padding: 20px 0;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.logo{
-	width: 120px;
-	cursor: pointer;
-}
-
-.navbar ul li{
-	list-style: none;
-	display: inline-block;
-	margin: 0 20px;
-	position: relative;
-}
-
-.navbar ul li a{
-	text-decoration: none;
-	color: #fff;
-	text-transform: uppercase;
-}
-
-.navbar ul li::after{
-	content: '';
-	height: 3px
-	;width: 0;
-	background: rgba(60,32,34,1);
-	position: absolute;
-	left: 0;
-	bottom: -5px;
-	transition: 0.5s;
-}
-
-.navbar ul li:hover::after{
-	width: 100%;
 }
 
 .box{
 	width: 450px;
 	background: rgba(0, 0, 0, 0.4);
-	padding: 40px;
+	padding-top: 30px;
 	text-align: center;
 	margin: auto;
-	margin-top: 5%;
+	margin-top: 2%;
 	color: #dad3db;
-	border-radius: 50%;
+	border-radius: 1%;
 }
 
 .box-img{
@@ -95,23 +44,17 @@ body{
 .box h1{
 	font-size: 40px;
 	letter-spacing: 1px;
-	font-weight: 100;
-	padding: 5px;
+	padding: 1px;
 }
 
-h2{
-	padding: 5px;
+.box h2{
+	padding: 0px;
 }
 
 .box h5{
 	font-size: 20px;
 	font-weight: 100;
 	padding: 5px;
-}
-
-ul{
-	margin: 0;
-	padding: 0;
 }
 
 .box li{
@@ -127,8 +70,13 @@ ul{
 }
 
 p{
-	padding: 5px;
-	padding-bottom: 5px;
+	padding: 2px;
+	padding-bottom: 2px;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
 }
 
 .example::-webkit-scrollbar {
@@ -155,38 +103,8 @@ p{
   border: 3px solid orange;
 }
 
-/* Center the loader */
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 100px;
-  height: 100px;
-  margin: -76px 0 0 -76px;
-  border: 10px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #34191A;
-  border-right: 16px solid #193433;
-  border-bottom: 16px solid #34191A;
-  border-left: 16px solid #193433;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-  opacity: 0.75;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
 /* Add animation to "page content" */
-.animate-bottom {
+/*.animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
@@ -203,7 +121,7 @@ p{
   from{ bottom:-100px; opacity:0 } 
   to{ bottom:0; opacity:0.5 }
 }
-
+*/
 #myDiv {
   display: none;
   text-align: center;
@@ -211,6 +129,133 @@ p{
 
 div {
   padding: 20px;
-  border: 1px solid #34191A;
   border-opacity:0.5;
+}
+
+.box {
+    -webkit-animation: mover 5s infinite  alternate;
+    animation: mover 5s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+.boxleft{
+	float:left;
+	width: 250px;
+}
+.boxleft{
+	background: rgba(0, 0, 0, 0.4);
+	padding-top: 30px;
+	text-align: center;
+	margin: auto;
+	margin-top: 6%;
+	margin-left: 5%;
+	color: #dad3db;
+	border-radius: 1%;
+	-webkit-animation: mover 5s infinite  alternate;
+    animation: mover 5s infinite  alternate;
+
+}
+
+.boxleft-img{
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+
+.boxleft h1{
+	font-size: 40px;
+	letter-spacing: 1px;
+	font-weight: 100;
+	padding: 1px;
+}
+
+.boxleft h2{
+	padding: 0px;
+}
+
+.boxleft h5{
+	font-size: 20px;
+	font-weight: 100;
+	padding: 5px;
+}
+
+.boxleft li{
+	display: inline-block;
+	margin: 6px;
+	list-style: none;
+}
+
+.boxleft li a{
+	color: #dad3db;
+	text-decoration: none;
+	font-size: 30px;
+}
+
+
+
+
+.boxright {
+    -webkit-animation: mover 5s infinite  alternate;
+    animation: mover 5s infinite  alternate;
+}
+
+.boxright{
+	float:right;
+	width: 250px;
+}
+.boxright{
+	background: rgba(0, 0, 0, 0.4);
+	padding-top: 30px;
+	text-align: center;
+	margin: auto;
+	margin-top: 6%;
+	margin-right: 5%;
+	color: #dad3db;
+	border-radius: 1%;
+}
+
+.boxright-img{
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+
+.boxright h1{
+	font-size: 40px;
+	letter-spacing: 1px;
+	font-weight: 100;
+	padding: 1px;
+}
+
+.boxright h2{
+	padding: 0px;
+}
+
+.boxright h5{
+	font-size: 20px;
+	font-weight: 100;
+	padding: 5px;
+}
+
+.boxright li{
+	display: inline-block;
+	margin: 6px;
+	list-style: none;
+}
+
+.boxright li a{
+	color: #dad3db;
+	text-decoration: none;
+	font-size: 30px;
+}
+.boxright {
+    -webkit-animation: mover 5s infinite  alternate;
+    animation: mover 5s infinite  alternate;
 }
