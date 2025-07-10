@@ -1,234 +1,184 @@
-*{
-	padding: 0px;
-	margin: 0px;
-	text-align: center;
-	font-family: "Indie Flower", monospace;
-}
-
+/* Global styles */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: #000B0E #000400;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: #000B0E #000400;
 }
 
-/* Works on Chrome, Edge, and Safari */
+/* Scrollbar styles for Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 12px;
+    width: 12px;
 }
 
 *::-webkit-scrollbar-track {
-  background: orange;
+    background: orange;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: blue;
-  border-radius: 20px;
-  border: 3px solid orange;
+    background-color: blue;
+    border-radius: 20px;
+    border: 3px solid orange;
 }
 
-body{
-	color: #dad3db;
-	background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url(pics/17.jpg);
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
+/* Body styles */
+body {
+    color: #dad3db;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(pics/17.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    line-height: 1.6;
 }
 
+/* General div styles */
 div {
-  padding: 20px;
-  border-opacity:0.5;
+    padding: 20px;
 }
 
+/* Keyframes for animations */
 @-webkit-keyframes mover {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
 }
+
 @keyframes mover {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
 }
 
-p{
-	padding: 2px;
-	padding-bottom: 2px;
+/* Paragraph styles */
+p {
+    padding: 2px;
 }
 
-ul{
-	margin: 0;
-	padding: 0;
+/* Unordered list styles */
+ul {
+    margin: 0;
+    padding: 0;
 }
 
-
-
-.intro{
-	text-align: center;
-	padding-top: 50px;
-	font-size: 40px;
+/* Intro section */
+.intro {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 40px;
 }
 
-.box{
-	width: 35%;
-	background: rgba(0, 0, 0, 0.4);
-	padding-top: 30px;
-	text-align: center;
-	margin: auto;
-	margin-top: 2%;
-	color: #dad3db;
-	border-radius: 1%;
-	-webkit-animation: mover 5s infinite  alternate;
-    animation: mover 5s infinite  alternate;
-}
-.box-img{
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-}
-.box h1{
-	font-size: 40px;
-	letter-spacing: 1px;
-	padding: 1px;
-}
-.box h2{
-	padding: 0px;
-}
-.box h5{
-	font-size: 20px;
-	padding: 5px;
-}
-.box li{
-	display: inline-block;
-	margin: 6px;
-	list-style: none;
-}
-.box li a{
-	color: #dad3db;
-	text-decoration: none;
-	font-size: 30px;
+/* Box styles */
+.box, .boxleft, .boxright {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    color: #dad3db;
+    border-radius: 5px;
+    -webkit-animation: mover 5s infinite alternate;
+    animation: mover 5s infinite alternate;
 }
 
+.box {
+    width: 35%;
+    margin-top: 2%;
+}
+
+.box-img, .boxleft-img, .boxright-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.box h1, .boxleft h1, .boxright h1 {
+    font-size: 40px;
+    letter-spacing: 1px;
+    padding: 1px;
+}
+
+.box h5, .boxleft h5, .boxright h5 {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.box li, .boxleft li, .boxright li {
+    display: inline-block;
+    margin: 6px;
+    list-style: none;
+}
+
+.box li a, .boxleft li a, .boxright li a {
+    color: #dad3db;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.box li a:hover {
+    text-decoration: underline;
+}
+
+/* Hide scrollbars for specific elements */
 .example::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
-
-/* Add animation to "page content" */
-/*.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:0.5 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:0.5 }
-}
-*/
+/* Hidden div */
 #myDiv {
-  display: none;
-  text-align: center;
+    display: none;
+    text-align: center;
 }
 
-.boxleft{
-	background: rgba(0, 0, 0, 0.4);
-	padding-top: 30px;
-	text-align: center;
-	margin: auto;
-	margin-top: 6%;
-	margin-left: 5%;
-	color: #dad3db;
-	border-radius: 1%;
-	-webkit-animation: mover 5s infinite  alternate;
-    animation: mover 5s infinite  alternate;
-    float:left;
-	width: 20%;
+/* Left container styles */
+.boxleft-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    float: left;
+    width: 20%;
+    margin-top: 6%;
+    margin-left: 5%;
 }
 
-.boxleft-img{
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
+/* Right container styles */
+.boxright-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    float: right;
+    width: 20%;
+    margin-top: 6%;
+    margin-left: 5%;
 }
 
-.boxleft h1{
-	font-size: 40px;
-	letter-spacing: 1px;
-	padding: 1px;
+/* Blog-specific styles */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.boxleft h2{
-	padding: 0px;
+.blog-post {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 
-.boxleft h5{
-	font-size: 20px;
-	padding: 5px;
+.blog-post h2 {
+    color: #333;
 }
 
-.boxleft li{
-	display: inline-block;
-	margin: 6px;
-	list-style: none;
+.blog-post p {
+    color: #555;
 }
 
-.boxleft li a{
-	color: #dad3db;
-	text-decoration: none;
-	font-size: 30px;
+.blog-post a {
+    color: #007BFF;
+    text-decoration: none;
 }
 
-
-
-
-.boxright{
-	background: rgba(0, 0, 0, 0.4);
-	padding-top: 30px;
-	text-align: center;
-	margin: auto;
-	margin-top: 6%;
-	margin-right: 5%;
-	color: #dad3db;
-	border-radius: 1%;
-	float:right;
-	width: 20%;
-    -webkit-animation: mover 5s infinite  alternate;
-    animation: mover 5s infinite  alternate;
-}
-
-.boxright-img{
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-}
-
-.boxright h1{
-	font-size: 40px;
-	letter-spacing: 1px;
-	padding: 1px;
-}
-
-.boxright h2{
-	padding: 0px;
-}
-
-.boxright h5{
-	font-size: 20px;
-	padding: 5px;
-}
-
-.boxright li{
-	display: inline-block;
-	margin: 6px;
-	list-style: none;
-}
-
-.boxright li a{
-	color: #dad3db;
-	text-decoration: none;
-	font-size: 30px;
+.blog-post a:hover {
+    text-decoration: underline;
 }
