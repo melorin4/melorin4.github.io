@@ -1,0 +1,95 @@
+---
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Personal portfolio" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <nav class="top-bar" aria-label="Primary navigation">
+      <a href="/projects/">Projects</a>
+      <a href="/resume/">Resume</a>
+    </nav>
+
+    <main class="layout">
+      <aside class="side-box"></aside>
+      <section class="main-box"></section>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "Azuki";
+    src: url("/fonts/azuki.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+  }
+
+  :root {
+    font-family: "Azuki", serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: #becbd8;
+  }
+
+  .top-bar {
+    position: fixed;
+    z-index: 10;
+    top: 18px;
+    left: 50%;
+    display: flex;
+    gap: 24px;
+    transform: translateX(-50%);
+  }
+
+  .top-bar a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .top-bar a:hover {
+    text-decoration: underline;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 620px);
+    gap: 24px;
+    width: min(864px, calc(100% - 48px));
+    margin: 74px auto 32px;
+  }
+
+  .side-box,
+  .main-box {
+    min-height: 640px;
+  }
+
+  @media (max-width: 700px) {
+    .layout {
+      grid-template-columns: 1fr;
+      width: calc(100% - 32px);
+    }
+
+    .side-box,
+    .main-box {
+      min-height: 200px;
+    }
+  }
+</style>
