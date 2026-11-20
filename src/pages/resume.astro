@@ -1,0 +1,99 @@
+---
+// @ts-expect-error Astro/Vite resolves the global stylesheet at build time.
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Lorin Erol's resume" />
+    <title>Resume | Lorin Erol</title>
+  </head>
+  <body>
+    <nav class="top-bar" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/resume/">Resume</a>
+    </nav>
+
+    <main class="layout resume-layout">
+      <aside class="side-box resume-side">
+        <p class="side-stars">* * *</p>
+        <h1>lorin</h1>
+        <p class="side-stars">* * *</p>
+        <p>age: 22</p>
+        <p>swe student</p>
+        <p>she/her</p>
+        <p class="side-stars">* * *</p>
+        <a class="download-link" href="/documents/LorinErol-CV.pdf" download>download cv</a>
+      </aside>
+
+      <article class="main-box resume-box">
+        <header class="resume-header">
+          <h2>Lorin Erol</h2>
+          <p>British Citizen</p>
+          <p>(537) 384-9001 | lorinerol257@gmail.com</p>
+          <p>Izmir, Turkiye</p>
+        </header>
+
+        <section>
+          <h3>Experience</h3>
+          <h4>Site Software Applications Engineer Intern</h4>
+          <p class="resume-meta">Borgwarner Inc. | Izmir, Turkiye | Jul. 2026 - Present</p>
+          <ul>
+            <li>Automated workflows and developed Microsoft Power Platform and .NET Razor applications for Quality digitalization.</li>
+            <li>Built React and TypeScript data visualization components for Power BI dashboards.</li>
+            <li>Managed database infrastructure and wrote SQL queries for extraction, manipulation, and storage.</li>
+            <li>Developed Python scripts for data processing and operational efficiency.</li>
+          </ul>
+
+          <h4>Web Development Intern</h4>
+          <p class="resume-meta">Solve Surplus Consultancy LTD | London, United Kingdom | Oct. 2025 - Jan. 2026</p>
+          <ul>
+            <li>Developed and deployed the company website with responsive design.</li>
+            <li>Managed hosting and domain configuration for a secure online launch.</li>
+          </ul>
+
+          <h4>Frontend Developer Intern</h4>
+          <p class="resume-meta">Vestel Electronics Inc. | Manisa, Turkiye | Jul. 2025 - Aug. 2025</p>
+          <ul>
+            <li>Fixed bugs and improved the official Vestel RPA Request website through Azure DevOps.</li>
+            <li>Created UI/UX mockups for the IK’ya Sor Chatbot Application in Figma.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Education</h3>
+          <h4>Izmir University of Economics</h4>
+          <p class="resume-meta">Bachelor's Degree in Software Engineering | 2022–2027 (Expected)</p>
+          <p>SE 380 Mobile Application Development · CE 475 Machine Learning · CE 350 Linux Utilities and Shell Scripting</p>
+        </section>
+
+        <section>
+          <h3>Projects</h3>
+          <h4>Squawk</h4>
+          <p class="resume-meta">Flutter · Dart · Firebase · Android Studio</p>
+          <p>Campus social media application with Firebase authentication and database services.</p>
+
+          <h4>PokeLooker</h4>
+          <p class="resume-meta">React · JavaScript · PokeAPI</p>
+          <p>Responsive Pokedex with search, filtering, and dynamic data fetching.</p>
+
+          <h4>My Homelab</h4>
+          <p class="resume-meta">Debian Linux · Networking · Pi-hole · VPN</p>
+          <p>Personal server with custom networking, network-wide DNS, ad blocking, and a self-hosted VPN.</p>
+        </section>
+
+        <section>
+          <h3>Skills</h3>
+          <p><strong>Languages:</strong> C#, C++, Java, Dart, Python, JavaScript, TypeScript, SQL, HTML/CSS</p>
+          <p><strong>Frameworks:</strong> .NET, Flutter, React, TailwindCSS, npm, Microsoft Power Platform, Power BI</p>
+          <p><strong>Tools:</strong> Git/GitHub, Azure DevOps, Firebase, SQLite, Android Studio, Figma, Canva, Linux/Unix</p>
+          <p><strong>Languages:</strong> English and Turkish (Native/Bilingual), Spanish (Beginner)</p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

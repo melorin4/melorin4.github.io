@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "Azuki";
+  src: url("/fonts/azuki.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: "Azuki", serif;
+  --page-bg: #dfecf8;
+  --box-bg: #ffffff;
+  --box-border: #99b3cc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+}
+
+.top-bar {
+  position: fixed;
+  z-index: 10;
+  top: 18px;
+  left: 50%;
+  display: flex;
+  gap: 24px;
+  width: min(864px, calc(100% - 48px));
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--box-border);
+  transform: translateX(-50%);
+  background: var(--box-bg);
+}
+
+.top-bar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.top-bar a:hover {
+  color: #6688aa;
+  text-decoration: underline;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 620px);
+  gap: 24px;
+  width: min(864px, calc(100% - 48px));
+  margin: 74px auto 32px;
+}
+
+.side-box,
+.main-box {
+  min-height: 640px;
+  background: var(--box-bg);
+  border: 2px solid var(--box-border);
+}
+
+.side-box {
+  padding: 18px 16px;
+}
+
+.side-box h1 {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.side-box p {
+  text-align: center; 
+  margin: 6px 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.main-box {
+  padding: 20px 22px;
+}
+
+.main-box p {
+  max-width: 52ch;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.side-stars {
+  text-align: center;
+}
+
+.download-link {
+  display: block;
+  margin-top: 18px;
+  text-align: center;
+  color: inherit;
+  text-decoration: underline;
+}
+
+.resume-layout {
+  align-items: start;
+}
+
+.resume-side {
+  min-height: 640px;
+  position: sticky;
+  top: 74px;
+}
+
+.resume-box {
+  min-height: 0;
+  font-family: "Azuki", serif;
+  font-size: 15px;
+}
+
+.resume-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.resume-header h2 {
+  margin: 0 0 4px;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.resume-header p,
+.resume-box p {
+  max-width: none;
+  margin: 2px 0;
+  line-height: 1.45;
+}
+
+.resume-box section {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px dotted var(--box-border);
+}
+
+.resume-box h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.resume-box h4 {
+  margin: 12px 0 2px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.resume-meta {
+  color: #6688aa;
+}
+
+.resume-box ul {
+  margin: 6px 0 10px;
+  padding-left: 18px;
+}
+
+.resume-box li {
+  margin: 4px 0;
+  line-height: 1.45;
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+    width: calc(100% - 32px);
+  }
+
+  .side-box,
+  .main-box {
+    min-height: 200px;
+  }
+}
