@@ -1,0 +1,27 @@
+---
+// @ts-expect-error Astro/Vite resolves the global stylesheet at build time.
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Lorin Erol's projects" />
+    <title>projects</title>
+  </head>
+  <body>
+    <nav class="top-bar" aria-label="Primary navigation">
+      <a href="/">home</a>
+      <a href="/projects/">projects</a>
+      <a href="/resume/">resume</a>
+    </nav>
+
+    <main class="layout projects-layout">
+      <section class="project-wip" aria-label="Projects work in progress">
+        <p>wip</p>
+      </section>
+    </main>
+  </body>
+</html>
